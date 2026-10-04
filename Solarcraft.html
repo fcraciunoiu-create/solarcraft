@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SolarCraft — Instalare panouri fotovoltaice în Dolj și Oltenia. Reduce factura la energie cu până la 90%. Consultanță gratuită: 0763 420 269.">
+<meta property="og:title" content="☀️ SolarCraft — Panouri fotovoltaice pentru casa ta">
+<meta property="og:description" content="Reduce factura la energie cu până la 90%. Consultanță gratuită la tine acasă.">
+<meta property="og:type" content="website">
+<title>☀️ SolarCraft — Panouri fotovoltaice Dolj & Oltenia</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; }
+    body { background: #0a1428; color: #e8eef5; line-height: 1.6; overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(10, 20, 40, 0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 193, 7, 0.15); z-index: 100; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-size: 18px; font-weight: 900; display: flex; align-items: center; gap: 8px; color: #ffc107; }
+    .nav-logo span { font-size: 22px; }
+    .nav-links { display: flex; gap: 20px; align-items: center; }
+    .nav-links a { color: rgba(232, 238, 245, 0.75); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover { color: #ffc107; }
+    .nav-phone { background: linear-gradient(135deg, #ff9800, #ffc107); color: #0a1428 !important; padding: 8px 16px; border-radius: 20px; font-size: 13px !important; font-weight: 800; }
+    @media (max-width: 700px) { .nav-links a:not(.nav-phone) { display: none; } }
+
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 24px 60px; background: radial-gradient(circle at 50% 30%, rgba(255, 193, 7, 0.18), transparent 60%); position: relative; overflow: hidden; }
+    .hero::before { content: '☀️'; position: absolute; top: 15%; right: 8%; font-size: 100px; opacity: 0.15; animation: rotate 20s linear infinite; }
+    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .hero-pill { display: inline-block; background: rgba(255, 193, 7, 0.15); border: 1px solid rgba(255, 193, 7, 0.4); color: #ffc107; padding: 6px 16px; border-radius: 30px; font-size: 12px; font-weight: 700; letter-spacing: 1px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(34px, 8vw, 64px); font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin-bottom: 20px; }
+    .hero h1 .gradient { background: linear-gradient(135deg, #ffc107, #ff9800); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { font-size: clamp(16px, 2.5vw, 19px); opacity: 0.75; max-width: 520px; margin-bottom: 32px; }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 28px; border-radius: 14px; font-size: 16px; font-weight: 700; text-decoration: none; cursor: pointer; border: none; transition: transform 0.15s; font-family: inherit; }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary { background: linear-gradient(135deg, #ff9800, #ffc107); color: #0a1428; box-shadow: 0 10px 30px rgba(255, 152, 0, 0.4); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(255, 152, 0, 0.55); }
+    .btn-secondary { background: rgba(255, 193, 7, 0.1); color: #ffc107; border: 1px solid rgba(255, 193, 7, 0.3); }
+    .btn-secondary:hover { background: rgba(255, 193, 7, 0.2); }
+    .btn-whatsapp { background: #25D366; color: #fff; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3); }
+    .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(37, 211, 102, 0.45); }
+
+    .trust-strip { padding: 30px 20px; background: rgba(255, 193, 7, 0.05); border-top: 1px solid rgba(255, 193, 7, 0.1); border-bottom: 1px solid rgba(255, 193, 7, 0.1); display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; opacity: 0.85; }
+    .trust-item .icon { font-size: 24px; }
+
+    .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-tag { text-align: center; font-size: 12px; font-weight: 700; letter-spacing: 3px; color: #ffc107; text-transform: uppercase; margin-bottom: 12px; }
+    .section-title { text-align: center; font-size: clamp(28px, 5vw, 42px); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin-bottom: 48px; }
+
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .benefit-card { background: rgba(255, 193, 7, 0.05); border: 1px solid rgba(255, 193, 7, 0.15); border-radius: 20px; padding: 32px 24px; text-align: center; transition: all 0.25s; }
+    .benefit-card:hover { border-color: rgba(255, 193, 7, 0.4); transform: translateY(-4px); }
+    .benefit-card .icon { font-size: 44px; margin-bottom: 16px; display: block; }
+    .benefit-card h3 { font-size: 19px; font-weight: 800; margin-bottom: 8px; }
+    .benefit-card p { font-size: 14px; opacity: 0.7; line-height: 1.5; }
+
+    .calc-box { max-width: 640px; margin: 0 auto; background: linear-gradient(160deg, rgba(255, 152, 0, 0.08), rgba(255, 193, 7, 0.03)); border: 2px solid rgba(255, 193, 7, 0.3); border-radius: 24px; padding: 32px 28px; }
+    .calc-box h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; text-align: center; }
+    .calc-box .subtitle { text-align: center; font-size: 14px; opacity: 0.7; margin-bottom: 24px; }
+    .calc-field { margin-bottom: 18px; }
+    .calc-field label { display: block; font-size: 13px; font-weight: 700; opacity: 0.75; margin-bottom: 6px; }
+    .calc-field input, .calc-field select { width: 100%; background: rgba(255, 193, 7, 0.06); border: 1px solid rgba(255, 193, 7, 0.25); border-radius: 12px; padding: 14px 16px; color: #e8eef5; font-size: 15px; outline: none; font-family: inherit; }
+    .calc-field input:focus, .calc-field select:focus { border-color: #ffc107; }
+    .calc-result { background: rgba(255, 193, 7, 0.1); border: 1px solid rgba(255, 193, 7, 0.3); border-radius: 16px; padding: 20px; margin-top: 20px; display: none; }
+    .calc-result.show { display: block; animation: fadeIn 0.4s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .calc-result .label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: #ffc107; font-weight: 700; margin-bottom: 6px; }
+    .calc-result .value { font-size: 32px; font-weight: 900; margin-bottom: 4px; color: #ffc107; letter-spacing: -1px; }
+    .calc-result .note { font-size: 13px; opacity: 0.7; margin-bottom: 12px; }
+    .calc-result .row { display: flex; justify-content: space-between; font-size: 14px; padding: 8px 0; border-bottom: 1px solid rgba(255, 193, 7, 0.1); }
+    .calc-result .row:last-child { border-bottom: none; }
+    .calc-btn { width: 100%; margin-top: 12px; padding: 16px; background: linear-gradient(135deg, #ff9800, #ffc107); color: #0a1428; border: none; border-radius: 12px; font-size: 16px; font-weight: 800; cursor: pointer; font-family: inherit; transition: transform 0.15s; }
+    .calc-btn:active { transform: scale(0.97); }
+
+    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .process-step { position: relative; background: rgba(255, 193, 7, 0.04); border: 1px solid rgba(255, 193, 7, 0.15); border-radius: 20px; padding: 32px 24px; }
+    .process-step .step-num { position: absolute; top: -16px; left: 24px; width: 40px; height: 40px; background: linear-gradient(135deg, #ff9800, #ffc107); color: #0a1428; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; }
+    .process-step h3 { font-size: 17px; font-weight: 800; margin: 12px 0 8px; }
+    .process-step p { font-size: 13.5px; opacity: 0.7; line-height: 1.5; }
+
+    .packages-intro { text-align: center; max-width: 760px; margin: -30px auto 48px; font-size: 15px; opacity: 0.75; line-height: 1.7; }
+    .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; align-items: stretch; }
+    .package-card { background: rgba(255, 193, 7, 0.04); border: 1px solid rgba(255, 193, 7, 0.15); border-radius: 24px; padding: 32px 26px; position: relative; display: flex; flex-direction: column; transition: all 0.25s; }
+    .package-card:hover { border-color: rgba(255, 193, 7, 0.4); transform: translateY(-4px); }
+    .package-card.featured { border-color: rgba(255, 193, 7, 0.5); background: linear-gradient(180deg, rgba(255, 152, 0, 0.1), rgba(255, 193, 7, 0.03)); transform: scale(1.02); }
+    .package-card.featured::before { content: 'CEL MAI POPULAR'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); padding: 5px 14px; background: linear-gradient(135deg, #ff9800, #ffc107); color: #0a1428; border-radius: 20px; font-size: 10px; font-weight: 900; letter-spacing: 1px; }
+    .package-card .pkg-name { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #ffc107; margin-bottom: 8px; }
+    .package-card .pkg-power { font-size: 30px; font-weight: 900; letter-spacing: -1px; margin-bottom: 4px; line-height: 1.1; }
+    .package-card .pkg-power span { font-size: 13px; font-weight: 600; opacity: 0.6; display: block; margin-top: 4px; }
+    .package-card .pkg-desc { font-size: 13px; opacity: 0.65; margin-bottom: 20px; }
+    .package-card ul { list-style: none; margin-bottom: 20px; flex: 1; }
+    .package-card ul li { font-size: 13.5px; padding: 5px 0 5px 24px; position: relative; opacity: 0.85; }
+    .package-card ul li::before { content: '✓'; position: absolute; left: 0; color: #ffc107; font-weight: 900; }
+    .package-card .price-box { text-align: center; margin-bottom: 18px; padding: 14px 0; border-top: 1px solid rgba(255, 193, 7, 0.15); border-bottom: 1px solid rgba(255, 193, 7, 0.15); }
+    .package-card .price-main { font-size: 30px; font-weight: 900; color: #ffc107; letter-spacing: -1px; line-height: 1.1; }
+    .package-card .price-sub { font-size: 12px; opacity: 0.65; margin-top: 6px; }
+    .package-card .btn { width: 100%; justify-content: center; padding: 14px; font-size: 14px; }
+
+    .packages-legal { max-width: 760px; margin: 48px auto 0; padding: 20px 24px; background: rgba(255,193,7,0.05); border: 1px solid rgba(255,193,7,0.15); border-radius: 16px; font-size: 13px; line-height: 1.7; opacity: 0.8; }
+    .packages-legal strong { color: #ffc107; }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .gallery-item { border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 193, 7, 0.15); box-shadow: 0 10px 30px rgba(255, 152, 0, 0.1); transition: transform 0.3s ease; background: rgba(255, 193, 7, 0.05); aspect-ratio: 4/3; }
+    .gallery-item:hover { transform: scale(1.02); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .testimonial { background: rgba(255, 193, 7, 0.04); border: 1px solid rgba(255, 193, 7, 0.15); border-radius: 20px; padding: 28px 24px; }
+    .testimonial .stars { color: #ffc107; font-size: 18px; margin-bottom: 12px; letter-spacing: 2px; }
+    .testimonial .quote { font-size: 15px; line-height: 1.6; margin-bottom: 16px; font-style: italic; opacity: 0.85; }
+    .testimonial .author { font-size: 13px; opacity: 0.6; font-weight: 600; }
+    .testimonial .location { font-size: 12px; opacity: 0.45; }
+
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid rgba(255, 193, 7, 0.15); padding: 20px 0; }
+    .faq-q { font-size: 16px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-q::after { content: '+'; font-size: 24px; color: #ffc107; font-weight: 300; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { font-size: 14px; opacity: 0.75; line-height: 1.6; max-height: 0; overflow: hidden; transition: max-height 0.3s, margin 0.3s; }
+    .faq-item.open .faq-a { max-height: 500px; margin-top: 12px; }
+
+    .cta-final { text-align: center; padding: 100px 24px; background: radial-gradient(circle at 50% 50%, rgba(255, 152, 0, 0.15), transparent 60%); }
+    .cta-final h2 { font-size: clamp(30px, 6vw, 50px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 16px; }
+    .cta-final h2 .gradient { background: linear-gradient(135deg, #ffc107, #ff9800); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .cta-final p { font-size: 16px; opacity: 0.7; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
+    .contact-card { background: rgba(255, 193, 7, 0.05); border: 1px solid rgba(255, 193, 7, 0.15); border-radius: 18px; padding: 24px; text-align: center; text-decoration: none; color: inherit; transition: all 0.25s; }
+    .contact-card:hover { border-color: rgba(255, 193, 7, 0.4); transform: translateY(-4px); }
+    .contact-card .icon { font-size: 32px; margin-bottom: 12px; display: block; }
+    .contact-card h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #ffc107; margin-bottom: 8px; }
+    .contact-card p { font-size: 15px; opacity: 0.85; line-height: 1.5; word-break: break-word; }
+
+    footer { padding: 40px 24px 30px; text-align: center; border-top: 1px solid rgba(255, 193, 7, 0.1); font-size: 13px; opacity: 0.5; }
+    footer a { color: #ffc107; text-decoration: none; }
+</style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo"><span>☀️</span> SolarCraft</div>
+        <div class="nav-links">
+            <a href="#calculator">Calculator</a>
+            <a href="#proces">Cum lucrăm</a>
+            <a href="#pachete">Pachete</a>
+            <a href="#galerie">Galerie</a>
+            <a href="tel:+40763420269" class="nav-phone">📞 0763 420 269</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-pill">★ CONSULTANȚĂ GRATUITĂ LA TINE ACASĂ</div>
+        <h1>Reduce factura la energie<br>cu până la <span class="gradient">90%</span></h1>
+        <p>Instalăm panouri fotovoltaice în Dolj și Oltenia. De la consultanță până la montaj și acte — ne ocupăm de tot.</p>
+        <div class="hero-cta">
+            <a href="#calculator" class="btn btn-primary">💰 Calculează economiile</a>
+            <a href="tel:+40763420269" class="btn btn-secondary">📞 0763 420 269</a>
+            <a href="https://wa.me/40763420269?text=Salut!%20Vreau%20o%20consultan%C8%9B%C4%83%20pentru%20panouri%20fotovoltaice." target="_blank" rel="noopener" class="btn btn-whatsapp">💬 WhatsApp</a>
+        </div>
+    </section>
+
+    <div class="trust-strip">
+        <div class="trust-item"><span class="icon">✅</span> Montaj autorizat ANRE</div>
+        <div class="trust-item"><span class="icon">🛡️</span> Garanție 25 ani panouri</div>
+        <div class="trust-item"><span class="icon">📋</span> Dosar prosumator inclus</div>
+        <div class="trust-item"><span class="icon">⚡</span> Rate fixe TBI Bank</div>
+    </div>
+
+    <section class="section">
+        <div class="section-tag">De ce panouri fotovoltaice</div>
+        <h2 class="section-title">Energia ta, sub controlul tău</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <span class="icon">💸</span>
+                <h3>Facturi mai mici</h3>
+                <p>Reduce factura la curent cu 70-90%. Investiția se recuperează în 4-6 ani.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="icon">🔋</span>
+                <h3>Independență energetică</h3>
+                <p>Nu mai depinzi de rețea. Sistemul produce curent chiar și pe timp înnorat.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="icon">💵</span>
+                <h3>Vinzi energia în plus</h3>
+                <p>Ca prosumator, vinzi surplusul către rețea. Câștigi în loc să plătești.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="icon">🌱</span>
+                <h3>Energie curată</h3>
+                <p>Reduci amprenta de carbon și contribui la un viitor sustenabil.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="calculator">
+        <div class="section-tag">Calculator economii</div>
+        <h2 class="section-title">Cât poți economisi?</h2>
+        <div class="calc-box">
+            <h3>💰 Calculator rapid</h3>
+            <p class="subtitle">Completează factura lunară și tipul de locuință pentru o estimare</p>
+            <div class="calc-field">
+                <label>Factura lunară la curent (lei)</label>
+                <input type="number" id="billInput" placeholder="Ex: 350" min="50" max="5000">
+            </div>
+            <div class="calc-field">
+                <label>Tipul de locuință</label>
+                <select id="houseType">
+                    <option value="1.0">Casă individuală (acoperiș propriu)</option>
+                    <option value="0.85">Casă cu curte mare (posibil teren)</option>
+                    <option value="0.7">Apartament / bloc</option>
+                </select>
+            </div>
+            <button class="calc-btn" onclick="calculateSavings()">Calculează economiile</button>
+            <div class="calc-result" id="calcResult">
+                <div class="label">Economie estimată lunar</div>
+                <div class="value" id="monthlySaving">0 lei</div>
+                <div class="note">Bazat pe o factură de <span id="refBill">0</span> lei/lună</div>
+                <div class="row"><span>Economie anuală</span><strong id="yearlySaving">0 lei</strong></div>
+                <div class="row"><span>Economie pe 25 ani</span><strong id="lifetimeSaving">0 lei</strong></div>
+                <div class="row"><span>Investiție estimată</span><strong id="investment">0 lei</strong></div>
+                <div class="row"><span>Perioadă recuperare</span><strong id="payback">0 ani</strong></div>
+                <a href="https://wa.me/40763420269?text=Salut!%20Am%20f%C4%83cut%20calculul%20%C8%99i%20vreau%20o%20ofert%C4%83%20exact%C4%83." target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%; justify-content: center; margin-top: 16px;">💬 Vreau ofertă exactă</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="proces">
+        <div class="section-tag">Cum lucrăm</div>
+        <h2 class="section-title">De la idee la montaj, în 4 pași</h2>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-num">1</div>
+                <h3>Consultanță gratuită</h3>
+                <p>Venim la tine acasă, analizăm consumul și îți spunem exact ce sistem ți se potrivește.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">2</div>
+                <h3>Ofertă personalizată</h3>
+                <p>Primești ofertă detaliată cu preț fix, termen de execuție și estimare de economii.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">3</div>
+                <h3>Montaj rapid</h3>
+                <p>Instalare în 1-3 zile, fără bătăi de cap. Ne ocupăm și de acte și autorizații.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">4</div>
+                <h3>Suport pe termen lung</h3>
+                <p>Garanție 25 ani la panouri, 10 ani la invertor. Monitorizare gratuită.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="pachete">
+        <div class="section-tag">Pachete complete</div>
+        <h2 class="section-title">Alege sistemul potrivit</h2>
+        <p class="packages-intro">
+            Toate pachetele includ: panouri Canadian, invertor Huawei, structură aluminiu, tablou siguranțe, dispozitiv monitorizare consum și producție, configurare aplicație telefon mobil. Montaj și depunere dosar prosumator incluse. Prețuri cu TVA inclus (9% persoane fizice). Rate fixe disponibile prin TBI Bank.
+        </p>
+        <div class="packages-grid">
+
+            <div class="package-card">
+                <div class="pkg-name">Start</div>
+                <div class="pkg-power">3.5 kW <span>monofazat</span></div>
+                <div class="pkg-desc">Producție anuală: ~4.600 kWh</div>
+                <ul>
+                    <li>Ideal pentru consum redus</li>
+                    <li>1-2 persoane</li>
+                    <li>Dosar prosumator inclus</li>
+                    <li>Proiectare și montaj incluse</li>
+                    <li>Garanție 25 ani panouri</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price-main">13.900 lei</div>
+                    <div class="price-sub">cu TVA · sau rate fixe TBI Bank</div>
+                </div>
+                <a href="https://wa.me/40763420269?text=Salut!%20Vreau%20ofert%C4%83%20pentru%20pachetul%203.5%20kW%20monofazat%20(13.900%20lei)." target="_blank" rel="noopener" class="btn btn-secondary">Cere ofertă</a>
+            </div>
+
+            <div class="package-card">
+                <div class="pkg-name">Casa Mică</div>
+                <div class="pkg-power">5.26 kW <span>monofazat</span></div>
+                <div class="pkg-desc">Producție anuală: ~6.900 kWh</div>
+                <ul>
+                    <li>Ideal pentru case mici</li>
+                    <li>2-3 persoane</li>
+                    <li>Dosar prosumator inclus</li>
+                    <li>Proiectare și montaj incluse</li>
+                    <li>Garanție 25 ani panouri</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price-main">18.900 lei</div>
+                    <div class="price-sub">cu TVA · sau rate fixe TBI Bank</div>
+                </div>
+                <a href="https://wa.me/40763420269?text=Salut!%20Vreau%20ofert%C4%83%20pentru%20pachetul%205.26%20kW%20monofazat%20(18.900%20lei)." target="_blank" rel="noopener" class="btn btn-secondary">Cere ofertă</a>
+            </div>
+
+            <div class="package-card featured">
+                <div class="pkg-name">Family</div>
+                <div class="pkg-power">7 kW <span>monofazat</span></div>
+                <div class="pkg-desc">Producție anuală: ~9.200 kWh</div>
+                <ul>
+                    <li>Cel mai popular pachet</li>
+                    <li>3-4 persoane</li>
+                    <li>Dosar prosumator inclus</li>
+                    <li>Proiectare și montaj incluse</li>
+                    <li>Garanție 25 ani panouri</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price-main">21.900 lei</div>
+                    <div class="price-sub">cu TVA · sau rate fixe TBI Bank</div>
+                </div>
+                <a href="https://wa.me/40763420269?text=Salut!%20Vreau%20ofert%C4%83%20pentru%20pachetul%207%20kW%20monofazat%20(21.900%20lei)." target="_blank" rel="noopener" class="btn btn-primary">Cere ofertă</a>
+            </div>
+
+            <div class="package-card">
+                <div class="pkg-name">Comfort</div>
+                <div class="pkg-power">10.5 kW <span>trifazat</span></div>
+                <div class="pkg-desc">Producție anuală: ~13.700 kWh</div>
+                <ul>
+                    <li>Pentru case medii-mari</li>
+                    <li>4-5 persoane</li>
+                    <li>Dosar prosumator inclus</li>
+                    <li>Proiectare și montaj incluse</li>
+                    <li>Garanție 25 ani panouri</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price-main">31.900 lei</div>
+                    <div class="price-sub">cu TVA · sau rate fixe TBI Bank</div>
+                </div>
+                <a href="https://wa.me/40763420269?text=Salut!%20Vreau%20ofert%C4%83%20pentru%20pachetul%2010.5%20kW%20trifazat%20(31.900%20lei)." target="_blank" rel="noopener" class="btn btn-secondary">Cere ofertă</a>
+            </div>
+
+            <div class="package-card">
+                <div class="pkg-name">Premium</div>
+                <div class="pkg-power">12.9 kW <span>trifazat</span></div>
+                <div class="pkg-desc">Producție anuală: ~17.000 kWh</div>
+                <ul>
+                    <li>Pentru case mari</li>
+                    <li>Consum ridicat</li>
+                    <li>Dosar prosumator inclus</li>
+                    <li>Proiectare și montaj incluse</li>
+                    <li>Garanție 25 ani panouri</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price-main">33.900 lei</div>
+                    <div class="price-sub">cu TVA · sau rate fixe TBI Bank</div>
+                </div>
+                <a href="https://wa.me/40763420269?text=Salut!%20Vreau%20ofert%C4%83%20pentru%20pachetul%2012.9%20kW%20trifazat%20(33.900%20lei)." target="_blank" rel="noopener" class="btn btn-secondary">Cere ofertă</a>
+            </div>
+
+            <div class="package-card">
+                <div class="pkg-name">Pro</div>
+                <div class="pkg-power">15.2 kW <span>trifazat</span></div>
+                <div class="pkg-desc">Producție anuală: ~20.200 kWh</div>
+                <ul>
+                    <li>Pentru afaceri mici / case foarte mari</li>
+                    <li>Consum ridicat</li>
+                    <li>Dosar prosumator inclus</li>
+                    <li>Proiectare și montaj incluse</li>
+                    <li>Garanție 25 ani panouri</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price-main">39.900 lei</div>
+                    <div class="price-sub">cu TVA · sau rate fixe TBI Bank</div>
+                </div>
+                <a href="https://wa.me/40763420269?text=Salut!%20Vreau%20ofert%C4%83%20pentru%20pachetul%2015.2%20kW%20trifazat%20(39.900%20lei)." target="_blank" rel="noopener" class="btn btn-secondary">Cere ofertă</a>
+            </div>
+
+            <div class="package-card">
+                <div class="pkg-name">Business</div>
+                <div class="pkg-power">21 kW <span>trifazat</span></div>
+                <div class="pkg-desc">Producție anuală: ~27.500 kWh</div>
+                <ul>
+                    <li>Pentru afaceri / ferme</li>
+                    <li>Consum industrial ușor</li>
+                    <li>Dosar prosumator inclus</li>
+                    <li>Proiectare și montaj incluse</li>
+                    <li>Garanție 25 ani panouri</li>
+                </ul>
+                <div class="price-box">
+                    <div class="price-main">52.900 lei</div>
+                    <div class="price-sub">cu TVA · sau rate fixe TBI Bank</div>
+                </div>
+                <a href="https://wa.me/40763420269?text=Salut!%20Vreau%20ofert%C4%83%20pentru%20pachetul%2021%20kW%20trifazat%20(52.900%20lei)." target="_blank" rel="noopener" class="btn btn-secondary">Cere ofertă</a>
+            </div>
+
+        </div>
+
+        <div class="packages-legal">
+            <strong>📌 Toate pachetele includ:</strong> Kit complet fotovoltaic cu panouri Canadian, invertor Huawei, structură aluminiu, tablou siguranțe curent continuu/alternativ, dispozitiv monitorizare consum și producție, configurare aplicație telefon mobil. Montaj și depunere dosar prosumator incluse.<br><br>
+            <strong>💰 Prețuri:</strong> Cu TVA inclus (9% pentru persoane fizice). Rate fixe disponibile prin TBI Bank.
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <div class="section-tag">Postere pachete</div>
+            <h2 class="section-title" style="font-size: clamp(22px, 4vw, 32px);">Detalii complete</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="pachet-3.5kw.jpg" alt="Pachet 3.5 kW monofazat — 13.900 lei" loading="lazy" onerror="this.style.display='none'"></div>
+                <div class="gallery-item"><img src="pachet-5.26kw.jpg" alt="Pachet 5.26 kW monofazat — 18.900 lei" loading="lazy" onerror="this.style.display='none'"></div>
+                <div class="gallery-item"><img src="pachet-7kw.jpg" alt="Pachet 7 kW monofazat — 21.900 lei" loading="lazy" onerror="this.style.display='none'"></div>
+                <div class="gallery-item"><img src="pachet-10.5kw.jpg" alt="Pachet 10.5 kW trifazat — 31.900 lei" loading="lazy" onerror="this.style.display='none'"></div>
+                <div class="gallery-item"><img src="pachet-12.9kw.jpg" alt="Pachet 12.9 kW trifazat — 33.900 lei" loading="lazy" onerror="this.style.display='none'"></div>
+                <div class="gallery-item"><img src="pachet-15.2kw.jpg" alt="Pachet 15.2 kW trifazat — 39.900 lei" loading="lazy" onerror="this.style.display='none'"></div>
+                <div class="gallery-item"><img src="pachet-21kw.jpg" alt="Pachet 21 kW trifazat — 52.900 lei" loading="lazy" onerror="this.style.display='none'"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="galerie">
+        <div class="section-tag">Galerie</div>
+        <h2 class="section-title">Instalările noastre</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="instalare-1.jpg" alt="Instalare panouri fotovoltaice" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="gallery-item"><img src="instalare-2.jpg" alt="Instalare panouri fotovoltaice" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="gallery-item"><img src="instalare-3-nou.jpg" alt="Instalare panouri fotovoltaice" loading="lazy" onerror="this.style.display='none'"></div>
+            <div class="gallery-item"><img src="instalare-4.jpg" alt="Instalare panouri fotovoltaice" loading="lazy" onerror="this.style.display='none'"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-tag">Ce spun clienții</div>
+        <h2 class="section-title">Recomandat de vecinii tăi</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="quote">„Factura la curent a scăzut de la 400 lei pe lună la 80 lei. Investiția se recuperează în 5 ani. Recomand!"</p>
+                <div class="author">— Ion D.</div>
+                <div class="location">Moțăței, Dolj</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="quote">„Echipă profesionistă, montaj rapid. Ne-au ajutat cu actele pentru prosumator. Foarte mulțumiți!"</p>
+                <div class="author">— Maria și Andrei P.</div>
+                <div class="location">Calafat, Dolj</div>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="quote">„Am sistemul de un an. Nu doar că nu mai plătesc curent, dar vând energie în rețea. Merită fiecare leu."</p>
+                <div class="author">— Vlad M.</div>
+                <div class="location">Craiova</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-tag">Întrebări frecvente</div>
+        <h2 class="section-title">Ce vrei să știi</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Cât costă un sistem de panouri fotovoltaice?</div>
+                <div class="faq-a">Pachetele noastre pornesc de la 13.900 lei (3.5 kW monofazat) și ajung până la 52.900 lei (21 kW trifazat). Prețul exact depinde de consumul tău și de tipul acoperișului. Oferim consultanță gratuită și ofertă personalizată.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Cât durează montajul?</div>
+                <div class="faq-a">Montajul propriu-zis durează 1-3 zile lucrătoare, în funcție de complexitatea sistemului și tipul acoperișului. Toate actele și autorizațiile durează 2-4 săptămâni.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Ce include pachetul complet?</div>
+                <div class="faq-a">Kit complet fotovoltaic cu panouri Canadian, invertor Huawei, structură aluminiu, tablou siguranțe curent continuu/alternativ, dispozitiv monitorizare consum și producție, configurare aplicație telefon mobil. Montaj și depunere dosar prosumator incluse.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Pot plăti în rate?</div>
+                <div class="faq-a">Da! Oferim rate fixe prin TBI Bank. Poți achiziționa orice pachet cu plata în rate fixe lunare, fără dobândă variabilă. Contactează-ne pentru detalii.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Ce se întâmplă pe timp înnorat sau iarna?</div>
+                <div class="faq-a">Panourile produc și pe timp înnorat, la aproximativ 20-30% din capacitate. Iarna producția scade, dar sistemul rămâne conectat la rețea, deci nu rămâi niciodată fără curent.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Care e durata de viață a panourilor?</div>
+                <div class="faq-a">Panourile au garanție 25 de ani și durată de viață de 30-40 ani. Invertorul are garanție 10 ani și se înlocuiește o dată la 10-15 ani.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Cât de repede se recuperează investiția?</div>
+                <div class="faq-a">În medie, 4-6 ani. Depinde de consumul tău, de prețul energiei și de programele de finanțare accesate. Sistemul produce energie gratuită timp de 20+ ani după recuperarea investiției.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <h2>Gata să scapi de <span class="gradient">facturi mari?</span></h2>
+        <p>Programează o consultanță gratuită. Venim la tine acasă, analizăm situația și îți spunem exact ce sistem ți se potrivește.</p>
+        <div class="hero-cta" style="justify-content: center;">
+            <a href="tel:+40763420269" class="btn btn-primary" style="font-size: 18px; padding: 20px 36px;">📞 0763 420 269</a>
+            <a href="https://wa.me/40763420269?text=Salut!%20Vreau%20o%20consultan%C8%9B%C4%83%20gratuit%C4%83." target="_blank" rel="noopener" class="btn btn-whatsapp" style="font-size: 18px; padding: 20px 36px;">💬 WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-tag">Contact</div>
+        <h2 class="section-title">Unde ne găsești</h2>
+        <div class="contact-grid">
+            <a href="tel:+40763420269" class="contact-card">
+                <span class="icon">📞</span>
+                <h3>Telefon</h3>
+                <p>0763 420 269</p>
+            </a>
+            <a href="https://wa.me/40763420269" target="_blank" rel="noopener" class="contact-card">
+                <span class="icon">💬</span>
+                <h3>WhatsApp</h3>
+                <p>Mesaj rapid</p>
+            </a>
+            <a href="mailto:solarcraft.fotovoltaice@gmail.com" class="contact-card">
+                <span class="icon">📧</span>
+                <h3>Email</h3>
+                <p>solarcraft.fotovoltaice@gmail.com</p>
+            </a>
+            <a href="https://www.facebook.com/search/top?q=SolarCraft%20fotovoltaice" target="_blank" rel="noopener" class="contact-card">
+                <span class="icon">📘</span>
+                <h3>Facebook</h3>
+                <p>SolarCraft - fotovoltaice</p>
+            </a>
+            <a href="https://www.instagram.com/solarcraft.fotovoltaice/" target="_blank" rel="noopener" class="contact-card">
+                <span class="icon">📷</span>
+                <h3>Instagram</h3>
+                <p>@solarcraft.fotovoltaice</p>
+            </a>
+            <div class="contact-card">
+                <span class="icon">📍</span>
+                <h3>Zonă de lucru</h3>
+                <p>Dolj și Oltenia</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 SolarCraft · Panouri fotovoltaice în Dolj și Oltenia<br>
+        <span style="opacity: 0.6; font-size: 11px;">Site realizat de <a href="https://fcraciunoiu-create.github.io/Portofoliu/">Florin Craciunoiu</a></span>
+    </footer>
+
+    <script>
+        function calculateSavings() {
+            const bill = parseFloat(document.getElementById('billInput').value);
+            const houseMultiplier = parseFloat(document.getElementById('houseType').value);
+            if (!bill || bill < 50) {
+                alert('Te rugăm să introduci o factură validă (minim 50 lei)');
+                return;
+            }
+            const reductionRate = 0.75 * houseMultiplier;
+            const monthlySaving = bill * reductionRate;
+            const yearlySaving = monthlySaving * 12;
+            const lifetimeSaving = yearlySaving * 25;
+            const estimatedKW = Math.max(3, Math.min(21, Math.round(bill / 40)));
+            const investmentPerKW = 4500;
+            const investment = estimatedKW * investmentPerKW;
+            const payback = investment / yearlySaving;
+            document.getElementById('monthlySaving').textContent = Math.round(monthlySaving) + ' lei/lună';
+            document.getElementById('refBill').textContent = bill;
+            document.getElementById('yearlySaving').textContent = Math.round(yearlySaving).toLocaleString('ro-RO') + ' lei';
+            document.getElementById('lifetimeSaving').textContent = Math.round(lifetimeSaving).toLocaleString('ro-RO') + ' lei';
+            document.getElementById('investment').textContent = investment.toLocaleString('ro-RO') + ' lei';
+            document.getElementById('payback').textContent = payback.toFixed(1) + ' ani';
+            document.getElementById('calcResult').classList.add('show');
+        }
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!wasOpen) item.classList.add('open');
+        }
+    </script>
+</body>
+</html>
